@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Five.Ten</string>
+    <!-- Cabinet layout -->
+    <string name="cabinet">Кабинет</string>
+        <string name="balance">Баланс</string>
+        <string name="course">КУРС $:</string>
+
+            <string name="usd_tab">USD</string>
+                <string name="usd">доларах</string>
+
+            <string name="hrn_tab">ГРН</string>
+                <string name="hrn">гривнах</string>
+
+            <string name="rub_tab">РУБ</string>
+                <string name="rub">рублях</string>
+
+            <string name="eur_tab">EUR</string>
+                <string name="eur">евро</string>
+
+            <string name="pln_tab">PLN</string>
+                <string name="pln">злотых</string>
+
+            <string name="balance_in">Баланс в </string>
+        <string name="popolnit">Пополнить</string>
+        <string name="exchange">Обмен</string>
+        <string name="transaction">Перевести</string>
+        <string name="invest">Сделать вклад</string>
+        <string name="vuvod">Вывод средств</string>
+        <string name="more">Еще</string>
+
+    <!-- Poplnenie layout -->
+    <string name="popolnenie">Пополнение</string>
+        <string name="pay_system">Платежная система</string>
+        <string name="summ">Сумма</string>
+        <string name="btn_popolnit">ПОПОЛНИТЬ</string>
+    <string name="enter_pass">Введите пароль</string>
+    <string name="enter_email">Введите e-mail</string>
+    <string name="login">ВХОД</string>
+
+    <!-- Transaction layout -->
+    <!--<string name="transaction_l">ПОПОЛНИТЬ</string>-->
+    <!--<string name="btn_popolnit">ПОПОЛНИТЬ</string>-->
+    <!--<string name="btn_popolnit">ПОПОЛНИТЬ</string>-->
+    <!--<string name="btn_popolnit">ПОПОЛНИТЬ</string>-->
+    <!--<string name="btn_popolnit">ПОПОЛНИТЬ</string>-->
+    <!--<string name="btn_popolnit">ПОПОЛНИТЬ</string>-->
+
+</resources>

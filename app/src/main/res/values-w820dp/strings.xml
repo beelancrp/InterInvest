@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="enter_pass">Введите пароль</string>
+    <string name="enter_email">Введите e-mail</string>
+    <string name="login">ВХОД</string>
+</resources>
