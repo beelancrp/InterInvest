@@ -36,6 +36,7 @@
     <string name="enter_pass">Введите пароль</string>
     <string name="enter_email">Введите e-mail</string>
     <string name="login">ВХОД</string>
+    <string name="btn_logout">LogOut</string>
 
     <!-- Transaction layout -->
     <!--<string name="transaction_l">ПОПОЛНИТЬ</string>-->
