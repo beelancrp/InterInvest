@@ -2,7 +2,6 @@ package com.example.beelan.fiveten.activities;
 
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -13,33 +12,35 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.beelan.fiveten.R;
+import com.example.beelan.fiveten.supports.User;
+import com.example.beelan.fiveten.supports.UserLocalStore;
 
 
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
-    private static final int REQUEST_SIGNUP = 0;
 
-    EditText _emailText;
-    EditText _passwordText;
-    Button _loginButton;
-    TextInputLayout _emailTextInput;
-    TextInputLayout _passwordTextInput;
+    private EditText _emailText;
+    private EditText _passwordText;
+    private Button _loginButton;
+    private TextInputLayout _emailTextInput;
+    private TextInputLayout _passwordTextInput;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
-        _emailText         = (EditText)findViewById(R.id.input_email);
-        _passwordText      = (EditText)findViewById(R.id.input_password);
-        _loginButton       = (Button)findViewById(R.id.btn_login);
-        _emailTextInput    = (TextInputLayout)findViewById(R.id.TI_email);
-        _passwordTextInput = (TextInputLayout)findViewById(R.id.TI_pass);
+
+        _emailText         = (EditText)         findViewById(R.id.input_email);
+        _passwordText      = (EditText)         findViewById(R.id.input_password);
+        _loginButton       = (Button)           findViewById(R.id.btn_login);
+        _emailTextInput    = (TextInputLayout)  findViewById(R.id.TI_email);
+        _passwordTextInput = (TextInputLayout)  findViewById(R.id.TI_pass);
 
         _loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    login();
-                }
+                login();
+            }
         });
 
     }
@@ -60,8 +61,8 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
 
-        String email = _emailText.getText().toString();
-        String password = _passwordText.getText().toString();
+        final String email    = _emailText.getText().toString();
+        final String password = _passwordText.getText().toString();
 
         // TODO: Implement your own authentication logic here.
 
@@ -69,24 +70,11 @@ public class LoginActivity extends AppCompatActivity {
                 new Runnable() {
                     public void run() {
                         // On complete call either onLoginSuccess or onLoginFailed
-                        onLoginSuccess();
+                        onLoginSuccess(email, password);
                         // onLoginFailed();
                         progressDialog.dismiss();
                     }
                 }, 3000);
-    }
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_SIGNUP) {
-            if (resultCode == RESULT_OK) {
-
-                // TODO: Implement successful signup logic here
-                // By default we just finish the Activity and log them in automatically
-                this.finish();
-            }
-        }
     }
 
     @Override
@@ -95,8 +83,11 @@ public class LoginActivity extends AppCompatActivity {
         moveTaskToBack(true);
     }
 
-    public void onLoginSuccess() {
+    public void onLoginSuccess(String login, String pass) {
         _loginButton.setEnabled(true);
+        UserLocalStore.setUserData(new User(login, pass));
+        UserLocalStore.setUserLoggedIn(true);
+        setResult(RESULT_OK);
         finish();
     }
 
