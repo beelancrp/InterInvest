@@ -19,7 +19,7 @@
             android:layout_height="110dp"
             android:layout_gravity="center_horizontal"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="124dp"
+            android:layout_marginTop="150dp"
             android:id="@+id/imageView" />
 
         <LinearLayout
@@ -28,7 +28,8 @@
             android:orientation="vertical"
             android:layout_below="@+id/imageView"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true">
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="190dp">
 
 
             <!-- Email Label -->
@@ -36,7 +37,6 @@
                 android:id="@+id/TI_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="199dp"
                 android:layout_marginBottom="8dp">
                 <EditText android:id="@+id/input_email"
                     android:layout_width="match_parent"

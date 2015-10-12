@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
     <android.support.design.widget.CoordinatorLayout
@@ -17,26 +18,37 @@
                 android:id="@+id/toolbar"
                 android:layout_width="fill_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:title="@string/cabinet"
-                android:paddingRight="19dp"
-                android:paddingLeft="19dp">
+                android:paddingRight="20dp">
 
-                <ImageButton
+                <com.example.beelan.fiveten.supports.TextviewRobotoLight
+                    android:id="@+id/toolbar_title"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ic_logout"
-                    android:id="@+id/btn_logout"
-                    android:layout_gravity="end"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    />
-
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="72dp"
+                    android:layout_marginStart="72dp"
+                    android:gravity="left|center"
+                    android:text="@string/cabinet"
+                    android:textColor="@color/login_text_color"
+                    android:textSize="20sp"/>
 
 
             </android.support.v7.widget.Toolbar>
 
         </android.support.design.widget.AppBarLayout>
 
+
     </android.support.design.widget.CoordinatorLayout>
 
-</android.support.v4.widget.DrawerLayout>
+    <Button
+        android:id="@+id/toPay"
+        android:layout_width="100dp"
+        android:layout_height="56dp"
+        android:background="@color/colorAccent"
+        android:text="КНОПКА!!"
+        android:layout_marginTop="119dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="someClick"/>
+
+
+</RelativeLayout>

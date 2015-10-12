@@ -46,4 +46,8 @@
     <!--<string name="btn_popolnit">ПОПОЛНИТЬ</string>-->
     <!--<string name="btn_popolnit">ПОПОЛНИТЬ</string>-->
 
+    <string name="font_roboto_light">fonts/Roboto-Light.ttf</string>
+    <string name="font_roboto_light_italic">fonts/Roboto-LightItalic.ttf</string>
+    <string name="font_roboto_medium">fonts/Roboto-Medium.ttf</string>
+
 </resources>

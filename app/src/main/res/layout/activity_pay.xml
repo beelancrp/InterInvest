@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/view">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/pay_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:title="@string/popolnenie"
+            android:paddingLeft="20dp">
+
+            <com.example.beelan.fiveten.supports.TextviewRobotoLight
+                android:id="@+id/toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="52dp"
+                android:layout_marginStart="20dp"
+                android:gravity="left|center"
+                android:text="@string/popolnenie"
+                android:textColor="@color/login_text_color"
+                android:textSize="20sp"/>
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/spinner"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+
+            android:layout_marginTop="79dp"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:dropDownWidth="128dp"/>
+
+
+
+</RelativeLayout>

@@ -4,8 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 
 import com.example.beelan.fiveten.activities.LoginActivity;
+import com.example.beelan.fiveten.activities.PayActivity;
 import com.example.beelan.fiveten.supports.RequestCodes;
 import com.example.beelan.fiveten.supports.UserLocalStore;
 
@@ -13,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static final int ACTIVITY_MAIN = R.layout.activity_main;
     public static final int CABINET = R.string.cabinet;
-    public static final int COLOR_PRIMARY_DARK = R.color.colorPrimaryDark;
+    public static final boolean SHOW_TITLE = false;
+    public static final int MENU_LOGOUT = R.id.menu_item_logout;
 
     private Intent  intent;
     private Toolbar toolbar;
@@ -22,17 +28,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(ACTIVITY_MAIN);
+
         if(!UserLocalStore.isUserLoggedIn()){
             initLogin();
         }
+
         initToolBar();
-//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                UserLocalStore.cleanUserData();
-//                initLogin();
-//            }
-//        });
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case MENU_LOGOUT:
+                doLogOut();
+        }
+        return true;
     }
 
     private void initLogin() {
@@ -43,9 +60,8 @@ public class MainActivity extends AppCompatActivity {
     private void initToolBar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(CABINET);
-//        toolbar.setNavigationIcon(R.drawable.ic_logout);
         setSupportActionBar(toolbar);
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(SHOW_TITLE);
     }
 
 
@@ -64,8 +80,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void doLogOut (){
+        if(UserLocalStore.isUserLoggedIn()){
+            UserLocalStore.cleanUserData();
+            initLogin();
+        }
+    }
+
     @Override
     public void onBackPressed() {
 
+    }
+
+    public void someClick (View view){
+        switch (view.getId()){
+            case R.id.toPay:
+                Intent intent = new Intent(this, PayActivity.class);
+                startActivity(intent);
+                Log.d("On-press:", "ActivityStarted");
+        }
     }
 }

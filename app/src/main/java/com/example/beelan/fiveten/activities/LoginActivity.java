@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_layout);
+        setContentView(R.layout.activity_login);
 
         _emailText         = (EditText)         findViewById(R.id.input_email);
         _passwordText      = (EditText)         findViewById(R.id.input_password);
@@ -74,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                         // onLoginFailed();
                         progressDialog.dismiss();
                     }
-                }, 3000);
+                }, 1500);
     }
 
     @Override

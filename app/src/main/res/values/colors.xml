@@ -7,4 +7,5 @@
     <color name="btn_text_color">#ffffff</color>
     <color name="login_text_color">#000000</color>
     <color name="pass_text_color">#000000</color>
+    <color name="highlight_color">#000000</color>
 </resources>
