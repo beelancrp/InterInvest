@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    tools:context=".PayActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_height="wrap_content"
@@ -11,57 +14,16 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/pay_toolbar"
             android:layout_width="fill_parent"
-            android:layout_height="?attr/actionBarSize">
-
-            <com.example.beelan.fiveten.supports.TextviewRobotoLight
-                android:id="@+id/toolbar_title"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="52dp"
-                android:layout_marginStart="20dp"
-                android:gravity="left|center"
-                android:text="@string/popolnenie"
-                android:textColor="@color/login_text_color"
-                android:textSize="20sp"/>
-
-
-        </android.support.v7.widget.Toolbar>
+            android:layout_height="?attr/actionBarSize" />
 
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/TI_pay_system"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="79dp">
-        <EditText android:id="@+id/input_pay_system"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textAutoComplete"
-            android:hint="@string/enter_email"
-            android:fontFamily="HelveticaNeue-Light"
-            android:textSize="16sp"
-            android:textColor="@color/login_text_color" />
-    </android.support.design.widget.TextInputLayout>
+        android:layout_height="match_parent"
+        android:id="@+id/pay_system_fragment_container"
+        android:layout_below="@+id/view"
+        android:orientation="vertical" />
 
-    <!-- Password Label -->
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/TI_pay_system_number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="151dp">
-        <EditText android:id="@+id/input_pay_system_number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:hint="@string/enter_pass"
-            android:fontFamily="HelveticaNeue-Light"
-            android:textSize="16sp"
-            android:textColor="@color/pass_text_color" />
-    </android.support.design.widget.TextInputLayout>
 
 </RelativeLayout>

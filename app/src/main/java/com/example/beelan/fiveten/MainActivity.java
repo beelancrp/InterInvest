@@ -21,21 +21,21 @@ public class MainActivity extends AppCompatActivity {
     public static final boolean SHOW_TITLE = false;
     public static final int MENU_LOGOUT = R.id.menu_item_logout;
 
-    private Intent  intent;
-    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(ACTIVITY_MAIN);
+        initToolBar();
+
 
         if(!UserLocalStore.isUserLoggedIn()){
             initLogin();
         }
 
-        initToolBar();
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -52,16 +52,15 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    private void initLogin() {
-        intent = new Intent(this, LoginActivity.class);
-        startActivityForResult(intent, RequestCodes.REQUEST_CODE_LOGIN);
-    }
-
     private void initToolBar() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(CABINET);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(SHOW_TITLE);
+    }
+
+    private void initLogin() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivityForResult(intent, RequestCodes.REQUEST_CODE_LOGIN);
     }
 
 
@@ -87,14 +86,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void onBackPressed() {
-
-    }
 
     public void someClick (View view){
         switch (view.getId()){
-            case R.id.toPay:
+            case R.id.cabinetBtnPopolnit:
                 Intent intent = new Intent(this, PayActivity.class);
                 startActivity(intent);
                 Log.d("On-press:", "ActivityStarted");

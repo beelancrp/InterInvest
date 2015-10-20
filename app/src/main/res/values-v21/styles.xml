@@ -6,10 +6,11 @@
                 <item name="colorPrimary">@color/colorPrimary</item>
                 <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
                 <item name="colorAccent">@color/colorAccent</item>
-                <item name="android:colorBackground">@color/background_material_light</item>
+                <item name="android:colorBackground">@color/background</item>
                 <item name="android:statusBarColor">@color/colorPrimaryDark</item>
                 <item name="android:windowBackground">@color/background_material_light</item>
+                <item name="android:textColorPrimary">@color/primary_text_material_light</item>
         </style>
 
-        <style name="AppTheme_Dark_Dialog"></style>
+        <style name="AppTheme_Dark_Dialog"/>
 </resources>

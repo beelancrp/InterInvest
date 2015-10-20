@@ -1,25 +1,29 @@
 package com.example.beelan.fiveten.activities;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ArrayAdapter;
 
 import com.example.beelan.fiveten.R;
-import android.support.v7.widget.AppCompatSpinner;
+import com.example.beelan.fiveten.fragments.PayConfirmFragment;
+import com.example.beelan.fiveten.fragments.PayMainFragment;
 
 public class PayActivity extends AppCompatActivity {
 
-    public static final int ACTIVITY_PAY = R.layout.activity_pay;
-    public static final int PAY_TOOLBAR = R.id.pay_toolbar;
-    public static final int IC_KEYBOARD_BACKSPACE = R.drawable.ic_arrow_left;
-    public static final boolean SHOW_TITLE = false;
-    private static final String[] COUNTRIES = new String[] {
-            "Belgium", "France", "Italy", "Germany", "Spain"};
+    public static final int ACTIVITY_PAY                  = R.layout.activity_pay;
+    public static final int PAY_TOOLBAR                   = R.id.pay_toolbar;
+    public static final int IC_KEYBOARD_BACKSPACE         = R.drawable.ic_arrow_left;
+    public static final int BTN_POPOLNENIE_SUBMIT         = R.id.btn_popolnenie_submit;
+    public static final int POPOLNENIE                    = R.string.popolnenie;
+    public static final int PAY_SYSTEM_FRAGMENT_CONTAINER = R.id.pay_system_fragment_container;
 
     private Toolbar toolBar;
-    private AppCompatSpinner paySystem;
+    private PayConfirmFragment confirmFragment = new PayConfirmFragment();
+    private FragmentManager mFragmentManager;
+    private PayMainFragment mFragment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,27 +36,78 @@ public class PayActivity extends AppCompatActivity {
             public void onClick(View v) {
                 onBackPressed();
             }
+
         });
 
-//        initSpinner();
-//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-//                android.R.layout.simple_dropdown_item_1line, COUNTRIES);
-//        paySystem = (AppCompatSpinner)findViewById(R.id.spinner);
-////        paySystem.setHint(R.string.pay_system);
-////        paySystem.setUnderlineColor(getResources().getColor(R.color.colorPrimaryDark));
-//
-//        paySystem.setAdapter(adapter);
+        mFragmentManager = getSupportFragmentManager();
+        mFragment = new PayMainFragment();
+        mFragmentManager.beginTransaction().addToBackStack(null).replace(PAY_SYSTEM_FRAGMENT_CONTAINER, mFragment)
+                .commit();
+
     }
 
 
-    private void initSpinner() {
+    public void onSubmit(View view) {
+        switch (view.getId()){
+            case BTN_POPOLNENIE_SUBMIT:
+                mFragmentManager.beginTransaction()
+                    .replace(R.id.pay_system_fragment_container, confirmFragment, confirmFragment.TAG)
+                    .commit();
+        }
 
+    }
+
+    @Override
+    public void onBackPressed() {
+//        if (mFragmentManager.getBackStackEntryCount() >= 1){
+//            if (mFragmentManager.findFragmentByTag(mFragment.TAG) != null){
+//                finish();
+//            }
+//            if (mFragmentManager.findFragmentByTag(confirmFragment.TAG) != null){
+//                mFragmentManager.beginTransaction()
+//                        .hide(confirmFragment)
+//                        .remove(confirmFragment);
+//            }
+//        }else {
+//        }
+
+        super.onBackPressed();
     }
 
     private void initToolBar() {
         toolBar = (Toolbar) findViewById(PAY_TOOLBAR);
         toolBar.setNavigationIcon(IC_KEYBOARD_BACKSPACE);
+        toolBar.setTitle(POPOLNENIE);
         setSupportActionBar(toolBar);
-        getSupportActionBar().setDisplayShowTitleEnabled(SHOW_TITLE);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    private AppCompatSpinner paySystem;
+//    private static final String[] COUNTRIES = new String[] {
+//            "Belgium", "France", "Italy", "Germany", "Spain"};
+//        initSpinner();
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+//                android.R.layout.simple_dropdown_item_1line, COUNTRIES);
+//        paySystem = (AppCompatSpinner)findViewById(R.id.spinner);
+//        paySystem.setHint(R.string.pay_system);
+//        paySystem.setUnderlineColor(getResources().getColor(R.color.colorPrimaryDark));
+//
+//        paySystem.setAdapter(adapter);
