@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item android:state_pressed="false">-->
+        <!--<layer-list>-->
+             <!--SHADOW -->
+            <!--<item>-->
+                <!--<shape>-->
+                    <!--<gradient android:color="#aaa"-->
+                        <!--/>-->
+                    <!--<corners android:radius="2dp"/>-->
+                <!--</shape>-->
+            <!--</item>-->
+             <!--BUTTON -->
+            <!--<item android:bottom="2dp"-->
+                <!--android:right="2dp"-->
+                <!--android:left="2dp">-->
+                <!--<shape>-->
+                    <!--<padding android:bottom="5dp"/>-->
+                    <!--<gradient-->
+                        <!--android:startColor="#fff"-->
+                        <!--android:endColor="#fff"-->
+                        <!--android:angle="270" />-->
+                    <!--<corners-->
+                        <!--android:radius="2dp"/>-->
+                    <!--<padding-->
+                        <!--android:left="5dp"-->
+                        <!--android:top="5dp"-->
+                        <!--android:right="5dp"-->
+                        <!--android:bottom="5dp"/>-->
+                <!--</shape>-->
+            <!--</item>-->
+        <!--</layer-list>-->
+    <!--</item>-->
+
+    <!--<item android:state_pressed="true">-->
+        <!--<layer-list>-->
+             <!--SHADOW -->
+            <!--<item>-->
+                <!--<shape>-->
+                    <!--<solid android:color="#aaa"/>-->
+                    <!--<corners android:radius="2dp"/>-->
+                <!--</shape>-->
+            <!--</item>-->
+             <!--BUTTON -->
+            <!--<item android:bottom="1dp"-->
+                <!--android:left="1dp"-->
+                <!--android:right="1dp">-->
+                <!--<shape>-->
+                    <!--<padding android:bottom="5dp"/>-->
+                    <!--<gradient-->
+                        <!--android:endColor="#fff"-->
+                        <!--android:startColor="#fff"-->
+                        <!--android:angle="270" />-->
+                    <!--<corners-->
+                        <!--android:radius="2dp"/>-->
+                    <!--<padding-->
+                        <!--android:left="5dp"-->
+                        <!--android:top="5dp"-->
+                        <!--android:right="5dp"-->
+                        <!--android:bottom="5dp"/>-->
+                <!--</shape>-->
+            <!--</item>-->
+        <!--</layer-list>-->
+    <!--</item>-->
+
+</selector>

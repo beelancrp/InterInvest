@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/backgroundCabinet"
     tools:context=".MainActivity"
     android:orientation="vertical">
@@ -29,30 +30,43 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="@dimen/cabinetBtnHeight"
-            android:id="@+id/cabinetBtnPopolnit"
-            android:drawableTop="@drawable/deposits"
-            android:background="@color/background"
-            android:layout_marginLeft="9dp"
-            android:layout_marginBottom="9dp"
-            android:paddingTop="10dp"
-            android:text="@string/popolnit"
-            android:textColor="#6d6d6d"
-            android:textSize="12sp"
-            android:fontFamily="@string/font_roboto_regular"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:onClick="someClick" />
+        <!--<com.dd.ShadowLayout-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!-- -->
+            <!--android:alpha="1"-->
+            <!--app:sl_shadowRadius="2dp"-->
+            <!--app:sl_shadowColor="#AA000000"-->
+            <!--app:sl_dx="0dp"-->
+            <!--app:sl_dy="0dp">-->
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="@dimen/cabinetBtnHeight"
+                android:id="@+id/cabinetBtnPopolnit"
+                android:drawableTop="@drawable/deposits"
+                android:background="@color/background"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="9dp"
+                android:paddingTop="10dp"
+                android:text="@string/popolnit"
+                android:textColor="#6d6d6d"
+                android:textSize="12sp"
+                android:fontFamily="@string/font_roboto_regular"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:onClick="someClick" />
+        <!--</com.dd.ShadowLayout>-->
+
 
         <Button
             android:layout_width="0dp"
             android:layout_height="@dimen/cabinetBtnHeight"
             android:id="@+id/cabinetBtnExchange"
             android:drawableTop="@drawable/exchange"
-            android:background="@color/background"
             android:layout_marginLeft="9dp"
+            android:background="@color/background"
             android:layout_marginBottom="9dp"
             android:paddingTop="10dp"
             android:text="@string/exchange"
