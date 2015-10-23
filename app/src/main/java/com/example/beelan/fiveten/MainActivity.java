@@ -88,11 +88,16 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void someClick (View view){
+        Intent intent;
         switch (view.getId()){
             case R.id.cabinetBtnPopolnit:
-                Intent intent = new Intent(this, PayActivity.class);
+                intent = new Intent(this, PayActivity.class);
                 startActivity(intent);
                 Log.d("On-press:", "ActivityStarted");
+//            case R.id.cabinetBtnTransaction:
+//                intent = new Intent(this, TransactionActivity.class);
+//                startActivity(intent);
+//                Log.d("On-press:", "ActivityStarted");
         }
     }
 }

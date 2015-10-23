@@ -1,26 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/TI_pay_system"
-        android:layout_width="match_parent"
+    <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:id="@+id/TI_pay_system"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--android:layout_marginLeft="16dp">-->
+        <!--<EditText android:id="@+id/input_pay_system"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:inputType="textAutoComplete"-->
+            <!--android:hint="@string/pay_system"-->
+            <!--android:fontFamily="HelveticaNeue-Light"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textColor="@color/textColorPrimery" />-->
+    <!--</android.support.design.widget.TextInputLayout>-->
+
+    <fr.ganfra.materialspinner.MaterialSpinner
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp">
-        <EditText android:id="@+id/input_pay_system"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textAutoComplete"
-            android:hint="@string/pay_system"
-            android:fontFamily="HelveticaNeue-Light"
-            android:textSize="16sp"
-            android:textColor="@color/textColorPrimery" />
-    </android.support.design.widget.TextInputLayout>
+        android:layout_marginLeft="16dp"
+        android:gravity="start"
+        app:ms_multiline="false"
+        app:ms_hint="@string/pay_system"
+        app:ms_floatingLabelText="@string/pay_system"
+        app:ms_baseColor="@color/highlight_color"
+        app:ms_highlightColor="@color/colorAccent"
+        app:ms_errorColor="@color/submit_attantion_color"
+        app:ms_thickness="1dp"
+        app:ms_arrowColor="@color/colorAccent"
+        app:ms_arrowSize="12dp"
+        app:ms_alignLabels="false"
+        app:ms_floatingLabelColor="@color/colorAccent"
+        android:textAlignment="viewStart" />
 
     <!-- Password Label -->
     <android.support.design.widget.TextInputLayout
@@ -30,9 +53,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="14dp"
-        android:layout_below="@+id/TI_pay_system"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp">
+        android:layout_below="@+id/spinner"
+        android:layout_marginRight="14dp"
+        android:layout_marginLeft="14dp">
         <EditText android:id="@+id/input_pay_system_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,15 +63,18 @@
             android:hint="@string/summ"
             android:fontFamily="HelveticaNeue-Light"
             android:textSize="16sp"
-            android:textColor="@color/inputTextColor" />
+            android:textColor="@color/inputTextColor"
+            android:singleLine="false"
+            android:focusableInTouchMode="true" />
     </android.support.design.widget.TextInputLayout>
+
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_popolnit"
-        android:id="@+id/btn_popolnenie_submit"
-        android:background="@color/colorAccent"
+        android:id="@+id/btn_popolnit"
+        android:background="@drawable/btn_submit"
         android:textColor="@color/btnTextColor"
         android:textColorHighlight="@color/btnTextColor"
         android:layout_alignParentBottom="true"

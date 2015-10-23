@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <fr.ganfra.materialspinner.MaterialSpinner
+        android:id="@+id/transaction_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="start"
+        app:ms_multiline="false"
+        app:ms_hint="@string/pay_system"
+        app:ms_floatingLabelText="@string/pay_system"
+        app:ms_baseColor="@color/highlight_color"
+        app:ms_highlightColor="@color/colorAccent"
+        app:ms_errorColor="@color/submit_attantion_color"
+        app:ms_thickness="1dp"
+        app:ms_arrowColor="@color/colorAccent"
+        app:ms_arrowSize="12dp"
+        app:ms_alignLabels="false"
+        app:ms_floatingLabelColor="@color/colorAccent"/>
+
+    <!-- Password Label -->
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/TI_transaction_summ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp"
+        android:layout_below="@+id/transaction_spinner"
+        android:layout_marginRight="14dp"
+        android:layout_marginLeft="14dp">
+        <EditText android:id="@+id/input_transaction_summ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="@string/summ"
+            android:fontFamily="HelveticaNeue-Light"
+            android:textSize="16sp"
+            android:textColor="@color/inputTextColor"
+            android:singleLine="false"
+            android:focusableInTouchMode="true" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/TI_transaction_reciever"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/TI_transaction_summ"
+        android:layout_marginRight="14dp"
+        android:layout_marginLeft="14dp">
+        <EditText android:id="@+id/input_transaction_reciever"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="@string/transaction_reciever"
+            android:fontFamily="HelveticaNeue-Light"
+            android:textSize="16sp"
+            android:textColor="@color/inputTextColor"
+            android:singleLine="false"
+            android:focusableInTouchMode="true" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/TI_transaction_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/TI_transaction_reciever"
+        android:layout_marginRight="14dp"
+        android:layout_marginLeft="14dp">
+        <EditText android:id="@+id/input_transaction_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="@string/transaction_about"
+            android:fontFamily="HelveticaNeue-Light"
+            android:textSize="16sp"
+            android:textColor="@color/inputTextColor"
+            android:singleLine="false"
+            android:focusableInTouchMode="true" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/transaction"
+        android:id="@+id/btnTransaction"
+        android:background="@drawable/btn_submit"
+        android:textColor="@color/btnTextColor"
+        android:textColorHighlight="@color/btnTextColor"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="onSubmit"/>
+
+</RelativeLayout>

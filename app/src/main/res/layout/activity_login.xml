@@ -74,7 +74,7 @@
                 android:layout_marginBottom="16dp"
                 android:padding="12dp"
                 android:text="@string/login"
-                android:background="@color/colorAccent"
+                android:background="@drawable/btn_submit"
                 android:fontFamily="Roboto-Regular"
                 android:textSize="14dp"
                 android:textColor="@color/btnTextColor" />

@@ -9,17 +9,17 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.example.beelan.fiveten.R;
-import com.example.beelan.fiveten.supports.PayConfirmList;
+import com.example.beelan.fiveten.supports.FragmentComponentsList;
 
 import java.util.List;
 
-public class PayConfirmAdapter extends ArrayAdapter<PayConfirmList> {
+public class LayoutFragmentAdapter extends ArrayAdapter<FragmentComponentsList> {
 
-    List<PayConfirmList> list1;
+    List<FragmentComponentsList> list1;
     LayoutInflater layoutInflater;
     private int itemListLayout;
 
-    public PayConfirmAdapter(Context context, int resource, List<PayConfirmList> list) {
+    public LayoutFragmentAdapter(Context context, int resource, List<FragmentComponentsList> list) {
         super(context, resource, list);
         this.list1 = list;
         this.itemListLayout = resource;
@@ -36,7 +36,7 @@ public class PayConfirmAdapter extends ArrayAdapter<PayConfirmList> {
             view = layoutInflater.inflate(itemListLayout, null);
         }
 
-        PayConfirmList confirmList = getConfirmList(position);
+        FragmentComponentsList confirmList = getConfirmList(position);
 
         TextView title  = (TextView) view.findViewById(R.id.aaaaa);
         TextView value  = (TextView) view.findViewById(R.id.qqqq);
@@ -47,7 +47,7 @@ public class PayConfirmAdapter extends ArrayAdapter<PayConfirmList> {
         return view;
     }
 
-    private PayConfirmList getConfirmList(int position){
+    private FragmentComponentsList getConfirmList(int position){
         return getItem(position);
     }
 
@@ -57,7 +57,7 @@ public class PayConfirmAdapter extends ArrayAdapter<PayConfirmList> {
 //    }
 //
 //    @Override
-//    public PayConfirmList getItem(int position) {
+//    public FragmentComponentsList getItem(int position) {
 //        return list1.get(position);
 //    }
 //

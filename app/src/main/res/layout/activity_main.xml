@@ -74,7 +74,7 @@
             android:textSize="12sp"
             android:fontFamily="@string/font_roboto_regular"
             android:textAllCaps="false"
-
+            android:onClick="someClick"
             android:layout_weight="1" />
 
         <Button
@@ -92,7 +92,8 @@
             android:textSize="12sp"
             android:fontFamily="@string/font_roboto_regular"
             android:textAllCaps="false"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:onClick="someClick" />
         </LinearLayout>
 
     <LinearLayout

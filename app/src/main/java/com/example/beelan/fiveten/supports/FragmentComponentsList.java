@@ -1,13 +1,13 @@
 package com.example.beelan.fiveten.supports;
 
 
-public class PayConfirmList {
+public class FragmentComponentsList {
 
     private int id;
     private String title;
     private String value;
 
-    public PayConfirmList(int id, String title, String value) {
+    public FragmentComponentsList(int id, String title, String value) {
         this.id = id;
         this.title = title;
         this.value = value;

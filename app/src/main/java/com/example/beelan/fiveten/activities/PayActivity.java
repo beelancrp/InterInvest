@@ -15,7 +15,7 @@ public class PayActivity extends AppCompatActivity {
     public static final int ACTIVITY_PAY                  = R.layout.activity_pay;
     public static final int PAY_TOOLBAR                   = R.id.pay_toolbar;
     public static final int IC_KEYBOARD_BACKSPACE         = R.drawable.ic_arrow_left;
-    public static final int BTN_POPOLNENIE_SUBMIT         = R.id.btn_popolnenie_submit;
+    public static final int BTN_POPOLNENIE_SUBMIT         = R.id.btn_popolnit;
     public static final int POPOLNENIE                    = R.string.popolnenie;
     public static final int PAY_SYSTEM_FRAGMENT_CONTAINER = R.id.pay_system_fragment_container;
 
@@ -34,7 +34,12 @@ public class PayActivity extends AppCompatActivity {
         toolBar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                int getCountFragm = mFragmentManager.getBackStackEntryCount();
+                if (getCountFragm > 1) {
+                    mFragmentManager.popBackStack();
+                } else {
+                    finish();
+                }
             }
 
         });
@@ -51,27 +56,11 @@ public class PayActivity extends AppCompatActivity {
         switch (view.getId()){
             case BTN_POPOLNENIE_SUBMIT:
                 mFragmentManager.beginTransaction()
-                    .replace(R.id.pay_system_fragment_container, confirmFragment, confirmFragment.TAG)
-                    .commit();
+                        .addToBackStack(null)
+                        .replace(R.id.pay_system_fragment_container, confirmFragment, confirmFragment.getName())
+                        .commit();
         }
 
-    }
-
-    @Override
-    public void onBackPressed() {
-//        if (mFragmentManager.getBackStackEntryCount() >= 1){
-//            if (mFragmentManager.findFragmentByTag(mFragment.TAG) != null){
-//                finish();
-//            }
-//            if (mFragmentManager.findFragmentByTag(confirmFragment.TAG) != null){
-//                mFragmentManager.beginTransaction()
-//                        .hide(confirmFragment)
-//                        .remove(confirmFragment);
-//            }
-//        }else {
-//        }
-
-        super.onBackPressed();
     }
 
     private void initToolBar() {
@@ -80,6 +69,24 @@ public class PayActivity extends AppCompatActivity {
         toolBar.setTitle(POPOLNENIE);
         setSupportActionBar(toolBar);
     }
+//    private PayMainFragment getPayMainFragment() {
+//        FragmentManager fm = getSupportFragmentManager();
+//        int entryCount = fm.getBackStackEntryCount();
+//        if (entryCount > 0) {
+//            String fragmentTag = fm.getBackStackEntryAt(entryCount - 1).getName();
+//            return (PayMainFragment) fm.findFragmentByTag(fragmentTag);
+//        }
+//        return null;
+//    }
+//    private PayConfirmFragment getPayConfirmFragment() {
+//        FragmentManager fm = getSupportFragmentManager();
+//        int entryCount = fm.getBackStackEntryCount();
+//        if (entryCount > 0) {
+//            String fragmentTag = fm.getBackStackEntryAt(entryCount - 1).getName();
+//            return (PayConfirmFragment) fm.findFragmentByTag(fragmentTag);
+//        }
+//        return null;
+//    }
 }
 
 

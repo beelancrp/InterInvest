@@ -4,4 +4,8 @@
     <string name="enter_email">Введите e-mail</string>
     <string name="login">ВХОД</string>
     <string name="submit_text">Операция не подтверждена Вами!</string>
+    <string name="submit">ПОДТВЕРДИТЬ</string>
+    <string name="cancel">ОТМЕНИТЬ</string>
+    <string name="transaction_reciever">Получатель</string>
+    <string name="transaction_about">Примечание</string>
 </resources>
