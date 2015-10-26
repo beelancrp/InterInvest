@@ -21,7 +21,10 @@
             android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".activities.TransactionActivity"
             android:windowSoftInputMode="stateHidden"/>
-
+        <activity android:name=".activities.ExchangeActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".activities.MoreActivity"
+            android:windowSoftInputMode="stateHidden"/>
     </application>
 
 </manifest>

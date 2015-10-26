@@ -34,12 +34,7 @@ public class PayActivity extends AppCompatActivity {
         toolBar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int getCountFragm = mFragmentManager.getBackStackEntryCount();
-                if (getCountFragm > 1) {
-                    mFragmentManager.popBackStack();
-                } else {
-                    finish();
-                }
+                onBackPressed();
             }
 
         });
@@ -69,7 +64,22 @@ public class PayActivity extends AppCompatActivity {
         toolBar.setTitle(POPOLNENIE);
         setSupportActionBar(toolBar);
     }
-//    private PayMainFragment getPayMainFragment() {
+
+    @Override
+    public void onBackPressed() {
+        int getCountFragm = mFragmentManager.getBackStackEntryCount();
+        if (getCountFragm > 1) {
+            if(getCountFragm == 2) {
+                finish();
+            }else {
+                mFragmentManager.popBackStack();
+            }
+        } else{
+            finish();
+        }
+    }
+
+    //    private PayMainFragment getPayMainFragment() {
 //        FragmentManager fm = getSupportFragmentManager();
 //        int entryCount = fm.getBackStackEntryCount();
 //        if (entryCount > 0) {

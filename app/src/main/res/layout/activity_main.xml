@@ -10,7 +10,8 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/appBarLayout">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -56,7 +57,7 @@
                 android:fontFamily="@string/font_roboto_regular"
                 android:textAllCaps="false"
                 android:layout_weight="1"
-                android:onClick="someClick" />
+                android:onClick="onPay" />
         <!--</com.dd.ShadowLayout>-->
 
 
@@ -74,7 +75,7 @@
             android:textSize="12sp"
             android:fontFamily="@string/font_roboto_regular"
             android:textAllCaps="false"
-            android:onClick="someClick"
+            android:onClick="onExchange"
             android:layout_weight="1" />
 
         <Button
@@ -93,7 +94,7 @@
             android:fontFamily="@string/font_roboto_regular"
             android:textAllCaps="false"
             android:layout_weight="1"
-            android:onClick="someClick" />
+            android:onClick="onTransaction" />
         </LinearLayout>
 
     <LinearLayout
@@ -151,11 +152,9 @@
             android:textColor="#6d6d6d"
             android:textSize="12sp"
             android:fontFamily="@string/font_roboto_regular"
+            android:onClick="onMore"
             android:textAllCaps="false" />
         </LinearLayout>
-
-
-
 
 
 </RelativeLayout>

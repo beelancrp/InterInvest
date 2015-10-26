@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/from_pay_system"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:id="@+id/info1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="15dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/upper_divider"
+        android:layout_below="@+id/info1"
+        android:background="@color/highlight_color"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
+
+    <fr.ganfra.materialspinner.MaterialSpinner
+        android:id="@+id/exchange_spinner_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upper_divider"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="start"
+        app:ms_multiline="false"
+        app:ms_hint="@string/pay_system"
+        app:ms_floatingLabelText="@string/pay_system"
+        app:ms_baseColor="@android:color/secondary_text_dark"
+        app:ms_highlightColor="@color/colorAccent"
+        app:ms_errorColor="@color/submit_attantion_color"
+        app:ms_thickness="1dp"
+        app:ms_arrowColor="@color/colorAccent"
+        app:ms_arrowSize="12dp"
+        app:ms_alignLabels="false"
+        app:ms_floatingLabelColor="@color/colorAccent"
+        android:textAlignment="viewStart" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/TI_exchange_summ_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/exchange_spinner_1"
+        android:layout_marginRight="14dp"
+        android:layout_marginLeft="14dp">
+        <EditText android:id="@+id/input_exchange_summ_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="@string/summ"
+            android:fontFamily="HelveticaNeue-Light"
+            android:textSize="16sp"
+            android:textColor="@color/inputTextColor"
+            android:singleLine="false"
+            android:focusableInTouchMode="true" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TI_exchange_summ_1"
+        android:text="@string/to_pay_system"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:id="@+id/info2"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="15dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/bottom_divider"
+        android:layout_below="@+id/info2"
+        android:background="@color/highlight_color"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
+
+    <fr.ganfra.materialspinner.MaterialSpinner
+        android:id="@+id/exchange_spinner_2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bottom_divider"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="start"
+        app:ms_multiline="false"
+        app:ms_hint="@string/pay_system"
+        app:ms_floatingLabelText="@string/pay_system"
+        app:ms_baseColor="@android:color/secondary_text_dark"
+        app:ms_highlightColor="@color/colorAccent"
+        app:ms_errorColor="@color/submit_attantion_color"
+        app:ms_thickness="1dp"
+        app:ms_arrowColor="@color/colorAccent"
+        app:ms_arrowSize="12dp"
+        app:ms_alignLabels="false"
+        app:ms_floatingLabelColor="@color/colorAccent"
+        android:textAlignment="viewStart" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exchange_spinner_2"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/you_will_have"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="888 888"
+            android:textColor="@color/inputTextColor"
+            android:textSize="16sp"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_exchange"
+        android:id="@+id/btn_exchange"
+        android:background="@drawable/btn_submit"
+        android:textColor="@color/btnTextColor"
+        android:textColorHighlight="@color/btnTextColor"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="onSubmit"/>
+
+</RelativeLayout>

@@ -9,8 +9,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.beelan.fiveten.activities.ExchangeActivity;
 import com.example.beelan.fiveten.activities.LoginActivity;
+import com.example.beelan.fiveten.activities.MoreActivity;
 import com.example.beelan.fiveten.activities.PayActivity;
+import com.example.beelan.fiveten.activities.TransactionActivity;
 import com.example.beelan.fiveten.supports.RequestCodes;
 import com.example.beelan.fiveten.supports.UserLocalStore;
 
@@ -20,14 +23,18 @@ public class MainActivity extends AppCompatActivity {
     public static final int CABINET = R.string.cabinet;
     public static final boolean SHOW_TITLE = false;
     public static final int MENU_LOGOUT = R.id.menu_item_logout;
+    public static final int IC_KEYBOARD_BACKSPACE         = R.drawable.ic_arrow_left;
 
 
+
+//    private FragmentManager mFragmentManager;
+    private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(ACTIVITY_MAIN);
         initToolBar();
-
+//        mFragmentManager = getSupportFragmentManager();
 
         if(!UserLocalStore.isUserLoggedIn()){
             initLogin();
@@ -53,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initToolBar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(CABINET);
         setSupportActionBar(toolbar);
     }
@@ -87,17 +94,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void someClick (View view){
-        Intent intent;
-        switch (view.getId()){
-            case R.id.cabinetBtnPopolnit:
-                intent = new Intent(this, PayActivity.class);
-                startActivity(intent);
-                Log.d("On-press:", "ActivityStarted");
-//            case R.id.cabinetBtnTransaction:
-//                intent = new Intent(this, TransactionActivity.class);
-//                startActivity(intent);
-//                Log.d("On-press:", "ActivityStarted");
-        }
+    public void onPay(View view){
+            Intent intent = new Intent(this, PayActivity.class);
+            startActivity(intent);
+            Log.d("On-press:", "ActivityStarted");
+    }
+
+    public void onTransaction(View view){
+            Intent intent = new Intent(this, TransactionActivity.class);
+            startActivity(intent);
+            Log.d("On-press:", "ActivityStarted");
+    }
+
+    public void onExchange(View view){
+        Intent intent = new Intent(this, ExchangeActivity.class);
+        startActivity(intent);
+        Log.d("On-press:", "ActivityStarted");
+    }
+
+    public void onMore (View view){
+        Intent intent = new Intent(this, MoreActivity.class);
+        startActivity(intent);
+        Log.d("On-press:", "ActivityStarted");
     }
 }

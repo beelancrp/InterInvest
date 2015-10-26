@@ -45,7 +45,7 @@
             android:textSize="16sp"
             android:textColor="@color/inputTextColor"
             android:singleLine="false"
-            android:focusableInTouchMode="true" />
+            android:focusableInTouchMode="true"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout

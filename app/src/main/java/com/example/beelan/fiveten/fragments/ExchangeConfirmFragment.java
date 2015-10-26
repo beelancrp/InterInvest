@@ -18,12 +18,19 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Created by beeLAN on 26.10.2015.
+ */
+public class ExchangeConfirmFragment extends Fragment {
 
-public class PayConfirmFragment extends Fragment {
+    public static final String TAG = "ExchangeConfirmFragment";
 
-    public static final String TAG = "PayConfirmFragment";
-    public static final int PAY_CONFIR_LIST_ITEM = R.layout.confirm_list_item;
-    public static final int LIST_VIEW_ID = R.id.pay_system_confirm_list;
+    public static final int FRAGMENT_EXCHANGE_CONFIRM = R.layout.fragment_exchange_confirm;
+    public static final int LIST_ITEM = R.layout.confirm_list_item;
+    public static final int LIST_VIEW_ID = R.id.exchange_confirm_list;
+    public static final int BTN_EXCHANGE_CANCEL = R.id.btn_exchange_cancel;
+    public static final int BTN_EXCHANGE_SUBMIT = R.id.btn_exchange_submit;
+
     private ListView listView;
     private Button submit;
     private Button cancel;
@@ -33,13 +40,13 @@ public class PayConfirmFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_pay_confirm, null);
+        View v = inflater.inflate(FRAGMENT_EXCHANGE_CONFIRM, null);
 
         listView = (ListView) v.findViewById(LIST_VIEW_ID);
         final List<FragmentComponentsList> list = initItemList();
-        final LayoutFragmentAdapter mAdapter = new LayoutFragmentAdapter(getContext(), PAY_CONFIR_LIST_ITEM, list);
+        final LayoutFragmentAdapter mAdapter = new LayoutFragmentAdapter(getContext(), LIST_ITEM, list);
         listView.setAdapter(mAdapter);
-        submit = (Button) v.findViewById(R.id.btn_popolnenie_submit);
+        submit = (Button) v.findViewById(BTN_EXCHANGE_SUBMIT);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +59,7 @@ public class PayConfirmFragment extends Fragment {
             }
         });
 
-        cancel = (Button) v.findViewById(R.id.btn_cancel);
+        cancel = (Button) v.findViewById(BTN_EXCHANGE_CANCEL);
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,16 +79,11 @@ public class PayConfirmFragment extends Fragment {
 
     private List<FragmentComponentsList> initItemList() {
         List<FragmentComponentsList> list = new ArrayList<FragmentComponentsList>();
-            list.add(new FragmentComponentsList(1, "Статус", "Ожидает подтверждения"));
-            list.add(new FragmentComponentsList(2, "Дата", "сегодня," + currentTime));
-            list.add(new FragmentComponentsList(3, "Платежная система", "Доллар"));
-            list.add(new FragmentComponentsList(4, "Сумма", "2,00"));
-            return list;
+        list.add(new FragmentComponentsList(1, "Статус", "Ожидает подтверждения"));
+        list.add(new FragmentComponentsList(2, "Дата", "сегодня," + currentTime));
+        list.add(new FragmentComponentsList(3, "Платежная система", "Доллар"));
+        list.add(new FragmentComponentsList(4, "Сумма", "2,00"));
+        return list;
 
     }
-
-    public static String getName() {
-        return TAG;
-    }
-
 }

@@ -55,5 +55,9 @@
     <string name="cancel">ОТМЕНИТЬ</string>
     <string name="transaction_reciever">Получатель</string>
     <string name="transaction_about">Примечание</string>
+    <string name="from_pay_system">С платежной системы</string>
+    <string name="to_pay_system">На платежную систему</string>
+    <string name="you_will_have">Вы получите:</string>
+    <string name="btn_exchange">ОБМЕНЯТЬ</string>
 
 </resources>

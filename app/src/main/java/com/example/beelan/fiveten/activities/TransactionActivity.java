@@ -7,7 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.example.beelan.fiveten.R;
-import com.example.beelan.fiveten.fragments.PayConfirmFragment;
+import com.example.beelan.fiveten.fragments.TransactionConfirmFragment;
 import com.example.beelan.fiveten.fragments.TransactionMainFragment;
 
 
@@ -18,7 +18,7 @@ public class TransactionActivity extends AppCompatActivity {
     public static final int TRANSACTION_FRAGMENT_CONTAINER = R.id.transaction_fragment_container;
 
     private Toolbar toolBar;
-    private PayConfirmFragment confirmFragment = new PayConfirmFragment();
+    private TransactionConfirmFragment confirmFragment = new TransactionConfirmFragment();
     private FragmentManager mFragmentManager;
     private TransactionMainFragment mFragment;
 
@@ -46,10 +46,11 @@ public class TransactionActivity extends AppCompatActivity {
 
 
     public void onSubmit(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.btnTransaction:
                 mFragmentManager.beginTransaction()
-                        .replace(R.id.pay_system_fragment_container, confirmFragment, confirmFragment.TAG)
+                        .addToBackStack(null)
+                        .replace(R.id.transaction_fragment_container, confirmFragment, confirmFragment.TAG)
                         .commit();
         }
 
@@ -60,5 +61,15 @@ public class TransactionActivity extends AppCompatActivity {
         toolBar.setNavigationIcon(IC_KEYBOARD_BACKSPACE);
         toolBar.setTitle(R.string.transaction);
         setSupportActionBar(toolBar);
+    }
+
+    @Override
+    public void onBackPressed() {
+        int getCountFragm = mFragmentManager.getBackStackEntryCount();
+        if (getCountFragm > 1) {
+            mFragmentManager.popBackStack();
+        } else {
+            finish();
+        }
     }
 }
