@@ -25,6 +25,8 @@
             android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".activities.MoreActivity"
             android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".activities.VuvodActivity"
+            android:windowSoftInputMode="stateHidden"/>
     </application>
 
 </manifest>

@@ -14,6 +14,7 @@ import com.example.beelan.fiveten.activities.LoginActivity;
 import com.example.beelan.fiveten.activities.MoreActivity;
 import com.example.beelan.fiveten.activities.PayActivity;
 import com.example.beelan.fiveten.activities.TransactionActivity;
+import com.example.beelan.fiveten.activities.VuvodActivity;
 import com.example.beelan.fiveten.supports.RequestCodes;
 import com.example.beelan.fiveten.supports.UserLocalStore;
 
@@ -114,6 +115,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void onMore (View view){
         Intent intent = new Intent(this, MoreActivity.class);
+        startActivity(intent);
+        Log.d("On-press:", "ActivityStarted");
+    }
+
+    public void onVuvod (View view){
+        Intent intent = new Intent(this, VuvodActivity.class);
         startActivity(intent);
         Log.d("On-press:", "ActivityStarted");
     }

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/inputTextColor"
+        android:text="sometext"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/key"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/colorAccent"
+        android:text="sometext"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/key"
+        android:layout_toEndOf="@+id/key"
+        android:paddingLeft="29dp"
+        android:id="@+id/value1"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:id="@+id/value2"
+        android:textColor="@color/colorAccent"
+        android:text="sometext"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/value1"
+        android:layout_toEndOf="@+id/value1"
+        android:paddingLeft="51dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/colorAccent"
+        android:text="sometext"
+        android:layout_toRightOf="@+id/value2"
+        android:layout_toEndOf="@+id/value2"
+        android:paddingLeft="51dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:id="@+id/value3" />
+
+
+</RelativeLayout>

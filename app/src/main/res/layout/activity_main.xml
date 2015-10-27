@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/backgroundCabinet"
     tools:context=".MainActivity"
     android:orientation="vertical">
@@ -120,6 +119,7 @@
             android:paddingTop="10dp"
             android:textColor="#6d6d6d"
             android:textSize="12sp"
+            android:onClick="onVuvod"
             android:fontFamily="@string/font_roboto_regular"
             android:textAllCaps="false" />
 
@@ -135,6 +135,7 @@
             android:background="@color/background"
             android:textColor="#6d6d6d"
             android:textSize="12sp"
+            android:onClick="onVuvod"
             android:fontFamily="@string/font_roboto_regular"
             android:textAllCaps="false" />
 

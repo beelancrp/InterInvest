@@ -78,25 +78,6 @@ public class PayActivity extends AppCompatActivity {
             finish();
         }
     }
-
-    //    private PayMainFragment getPayMainFragment() {
-//        FragmentManager fm = getSupportFragmentManager();
-//        int entryCount = fm.getBackStackEntryCount();
-//        if (entryCount > 0) {
-//            String fragmentTag = fm.getBackStackEntryAt(entryCount - 1).getName();
-//            return (PayMainFragment) fm.findFragmentByTag(fragmentTag);
-//        }
-//        return null;
-//    }
-//    private PayConfirmFragment getPayConfirmFragment() {
-//        FragmentManager fm = getSupportFragmentManager();
-//        int entryCount = fm.getBackStackEntryCount();
-//        if (entryCount > 0) {
-//            String fragmentTag = fm.getBackStackEntryAt(entryCount - 1).getName();
-//            return (PayConfirmFragment) fm.findFragmentByTag(fragmentTag);
-//        }
-//        return null;
-//    }
 }
 
 

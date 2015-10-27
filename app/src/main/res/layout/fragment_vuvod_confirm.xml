@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:id="@+id/alertContainer"
+        android:paddingLeft="35dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/deposits"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_text"
+            android:layout_alignParentRight="true"
+            android:gravity="left|center_vertical|center_horizontal"
+            android:paddingRight="40dp"
+            android:textSize="14sp"
+            android:textColor="@color/submit_attantion_color" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/vuvod_confirm_list"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="true"
+        android:layout_below="@+id/alertContainer">
+    </ListView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:id="@+id/btn_vuvod_submit"
+        android:background="@drawable/btn_submit"
+        android:textColor="@color/btnTextColor"
+        android:textColorHighlight="@color/btnTextColor"
+        android:layout_above="@+id/btn_vuvod_cancel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="onSubmit"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:id="@+id/btn_vuvod_cancel"
+        android:background="@drawable/btn_cancel"
+        android:textColor="@color/colorAccent"
+        android:textColorHighlight="@color/btnTextColor"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="onSubmit"/>
+</RelativeLayout>

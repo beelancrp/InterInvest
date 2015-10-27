@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_container"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/inputTextColor"
+            android:text="sometext"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/key"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/colorAccent"
+            android:text="sometext"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/key"
+            android:layout_toEndOf="@+id/key"
+            android:paddingLeft="29dp"
+            android:id="@+id/value1"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:id="@+id/value2"
+            android:textColor="@color/colorAccent"
+            android:text="sometext"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/value1"
+            android:layout_toEndOf="@+id/value1"
+            android:paddingLeft="51dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/colorAccent"
+            android:text="sometext"
+            android:layout_toRightOf="@+id/value2"
+            android:layout_toEndOf="@+id/value2"
+            android:paddingLeft="51dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:id="@+id/value3" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/bottom_divider"
+        android:layout_below="@+id/info2"
+        android:background="@color/highlight_color"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/pay_system_confirm_list"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="true"
+        android:layout_below="@+id/alertContainer">
+    </ListView>
+
+    <fr.ganfra.materialspinner.MaterialSpinner
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="start"
+        app:ms_multiline="false"
+        app:ms_hint="@string/pay_system"
+        app:ms_floatingLabelText="@string/pay_system"
+        app:ms_baseColor="@color/highlight_color"
+        app:ms_highlightColor="@color/colorAccent"
+        app:ms_errorColor="@color/submit_attantion_color"
+        app:ms_thickness="1dp"
+        app:ms_arrowColor="@color/colorAccent"
+        app:ms_arrowSize="12dp"
+        app:ms_alignLabels="false"
+        app:ms_floatingLabelColor="@color/colorAccent"
+        android:textAlignment="viewStart" />
+
+    <!-- Password Label -->
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/TI_pay_system_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/spinner"
+        android:layout_marginRight="14dp"
+        android:layout_marginLeft="14dp">
+        <EditText android:id="@+id/input_pay_system_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="@string/summ"
+            android:fontFamily="HelveticaNeue-Light"
+            android:textSize="16sp"
+            android:textColor="@color/inputTextColor"
+            android:singleLine="false"
+            android:focusableInTouchMode="true" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_popolnit"
+        android:id="@+id/btn_popolnit"
+        android:background="@drawable/btn_submit"
+        android:textColor="@color/btnTextColor"
+        android:textColorHighlight="@color/btnTextColor"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="onSubmit"/>
+
+</RelativeLayout>
