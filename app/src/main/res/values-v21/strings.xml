@@ -13,4 +13,10 @@
     <string name="you_will_have">Вы получите:</string>
     <string name="btn_exchange">ОБМЕНЯТЬ</string>
     <string name="btn_vuvod">ВЫВЕСТИ</string>
+    <string name="font_roboto_light">fonts/Roboto-Light.ttf</string>
+    <string name="font_roboto_regular">fonts/Roboto-Regular.ttf</string>
+    <string name="font_roboto_light_italic">fonts/Roboto-LightItalic.ttf</string>
+    <string name="font_roboto_medium">fonts/Roboto-Medium.ttf</string>
+    <string name="font_helv_light">fonts/HelveticaNeueLight.ttf</string>
+    <string name="font_helv_thin">fonts/helveticaneuecyr-thin.otf</string>
 </resources>

@@ -1,8 +1,10 @@
 package com.example.beelan.fiveten.fragments;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +30,8 @@ public class PayConfirmFragment extends Fragment {
     private Button submit;
     private Button cancel;
     private String currentTime = new SimpleDateFormat("HH:mm").format(new Date());
-
+    List<FragmentComponentsList> list = initItemList();
+    LayoutFragmentAdapter mAdapter;
 
     @Nullable
     @Override
@@ -36,19 +39,18 @@ public class PayConfirmFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_pay_confirm, null);
 
         listView = (ListView) v.findViewById(LIST_VIEW_ID);
-        final List<FragmentComponentsList> list = initItemList();
-        final LayoutFragmentAdapter mAdapter = new LayoutFragmentAdapter(getContext(), PAY_CONFIR_LIST_ITEM, list);
+        mAdapter = new LayoutFragmentAdapter(getContext(), PAY_CONFIR_LIST_ITEM, list);
         listView.setAdapter(mAdapter);
         submit = (Button) v.findViewById(R.id.btn_popolnenie_submit);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                showDialog();
-                String currTime = new SimpleDateFormat("HH:mm").format(new Date());
-                list.add(new FragmentComponentsList(5, "Именено", "сегодня," + currTime));
-                mAdapter.notifyDataSetChanged();
-                initDeleteBtn();
+                showDialog();
+//                String currTime = new SimpleDateFormat("HH:mm").format(new Date());
+//                list.add(new FragmentComponentsList(5, "Именено", "сегодня," + currTime));
+//                mAdapter.notifyDataSetChanged();
+//                initDeleteBtn();
             }
         });
 
@@ -61,6 +63,29 @@ public class PayConfirmFragment extends Fragment {
         });
 
         return v;
+    }
+
+    private void showDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("Выбирите действие.")
+                .setMessage("Вы желаете подтвердить?")
+                .setPositiveButton("Да", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String currTime = new SimpleDateFormat("HH:mm").format(new Date());
+                        list.add(new FragmentComponentsList(5, "Именено", "сегодня," + currTime));
+                        mAdapter.notifyDataSetChanged();
+                        initDeleteBtn();
+                    }
+                })
+                .setNegativeButton("Нет", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
 
     private void initDeleteBtn() {

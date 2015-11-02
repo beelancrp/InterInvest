@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundCabinet"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/backgroundCabinet">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="fill_parent"
@@ -22,28 +23,176 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/appBarLayout"
+        android:id="@+id/cabinetBalanceLayout"
+        android:background="@drawable/shadow_3"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="80"
+                android:text="Баланс"
+                android:textSize="20sp"
+                android:paddingLeft="18dp"
+                android:paddingStart="18dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="12dp"
+                android:fontFamily="@string/font_roboto_light"
+                android:textColor="@color/colorAccent"
+                android:id="@+id/cabinet_balance" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="20"
+                android:text="КУРС $ : 22.40"
+                android:textSize="15sp"
+                android:paddingLeft="18dp"
+                android:paddingStart="18dp"
+                android:paddingTop="19dp"
+                android:paddingRight="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="13dp"
+                android:fontFamily="@string/font_roboto_light"
+                android:textColor="@color/colorAccent_60"
+                android:gravity="end"
+                android:id="@+id/cabinet_course" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Баланс в гривнах"
+            android:textSize="12sp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:fontFamily="@string/font_roboto_light"
+            android:textColor="@color/highlight_color_1"
+            android:layout_marginTop="@dimen/margin_balance_top"
+            android:id="@+id/cabinet_balance_in" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="59 596 грн"
+            android:textSize="40sp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:fontFamily="@string/font_roboto_light"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="8dp"
+            android:id="@+id/cabinet_your_balance"
+            android:layout_marginBottom="@dimen/margin_your_balance_bottom" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/usd_tab"
+                android:textSize="16sp"
+                android:fontFamily="@string/font_roboto_light"
+                android:textColor="@color/cabinetTabTextColor"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="26dp"
+                android:paddingBottom="25dp"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:id="@+id/cabinet_USD_tab"
+                android:onClick="onTabClick"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/hrn_tab"
+                android:textSize="16sp"
+                android:fontFamily="@string/font_roboto_light"
+                android:textColor="@color/cabinetTabTextColor"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="26dp"
+                android:paddingBottom="25dp"
+                android:clickable="true"
+                android:id="@+id/cabinet_UAH_tab"
+                android:onClick="onTabClick"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/rub_tab"
+                android:textSize="16sp"
+                android:fontFamily="@string/font_roboto_light"
+                android:textColor="@color/cabinetTabTextColor"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="26dp"
+                android:paddingBottom="25dp"
+                android:clickable="true"
+                android:id="@+id/cabinet_RUB_tab"
+                android:onClick="onTabClick"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/eur_tab"
+                android:textSize="16sp"
+                android:fontFamily="@string/font_roboto_light"
+                android:textColor="@color/cabinetTabTextColor"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="26dp"
+                android:paddingBottom="25dp"
+                android:clickable="true"
+                android:id="@+id/cabinet_EUR_tab"
+                android:onClick="onTabClick"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/pln_tab"
+                android:textSize="16sp"
+                android:fontFamily="@string/font_roboto_light"
+                android:textColor="@color/cabinetTabTextColor"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="26dp"
+                android:paddingBottom="25dp"
+                android:clickable="true"
+                android:id="@+id/cabinet_PLN_tab"
+                android:onClick="onTabClick"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cabinetBtnHeight"
         android:layout_gravity="bottom|center_horizontal"
         android:weightSum="3"
         android:orientation="horizontal"
         android:id="@+id/btnGroup_1"
-        android:layout_above="@+id/linearLayout"
+        android:layout_below="@+id/cabinetBalanceLayout"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <!--<com.dd.ShadowLayout-->
-            <!--android:layout_weight="1"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!-- -->
-            <!--android:alpha="1"-->
-            <!--app:sl_shadowRadius="2dp"-->
-            <!--app:sl_shadowColor="#AA000000"-->
-            <!--app:sl_dx="0dp"-->
-            <!--app:sl_dy="0dp">-->
-
             <Button
-                android:layout_width="0dp"
-                android:layout_height="@dimen/cabinetBtnHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:id="@+id/cabinetBtnPopolnit"
                 android:drawableTop="@drawable/deposits"
                 android:background="@color/background"
@@ -57,17 +206,13 @@
                 android:textAllCaps="false"
                 android:layout_weight="1"
                 android:onClick="onPay" />
-        <!--</com.dd.ShadowLayout>-->
-
 
         <Button
-            android:layout_width="0dp"
-            android:layout_height="@dimen/cabinetBtnHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/cabinetBtnExchange"
             android:drawableTop="@drawable/exchange"
-            android:layout_marginLeft="9dp"
             android:background="@color/background"
-            android:layout_marginBottom="9dp"
             android:paddingTop="10dp"
             android:text="@string/exchange"
             android:textColor="#6d6d6d"
@@ -75,17 +220,19 @@
             android:fontFamily="@string/font_roboto_regular"
             android:textAllCaps="false"
             android:onClick="onExchange"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginLeft="9dp"
+            android:layout_marginBottom="9dp" />
 
         <Button
-            android:layout_width="0dp"
-            android:layout_height="@dimen/cabinetBtnHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/cabinetBtnTransaction"
             android:drawableTop="@drawable/transfer"
             android:background="@color/background"
             android:layout_marginLeft="9dp"
             android:layout_marginBottom="9dp"
-            android:layout_marginRight="9dp"
+            android:layout_marginRight="8dp"
             android:paddingTop="10dp"
             android:text="@string/transaction"
             android:textColor="#6d6d6d"
@@ -98,18 +245,16 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/cabinetBtnHeight"
         android:layout_gravity="bottom|center_horizontal"
         android:weightSum="3"
         android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/linearLayout"
-        android:layout_marginBottom="9dp">
+        android:layout_below="@+id/btnGroup_1"
+        android:id="@+id/linearLayout">
 
         <Button
             android:layout_width="0dp"
-            android:layout_height="@dimen/cabinetBtnHeight"
+            android:layout_height="match_parent"
             android:id="@+id/imageButton4"
             android:layout_marginLeft="9dp"
             android:drawableTop="@drawable/contribution"
@@ -119,13 +264,14 @@
             android:paddingTop="10dp"
             android:textColor="#6d6d6d"
             android:textSize="12sp"
-            android:onClick="onVuvod"
+            android:onClick="onDeposit"
             android:fontFamily="@string/font_roboto_regular"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:layout_marginBottom="9dp" />
 
         <Button
             android:layout_width="0dp"
-            android:layout_height="@dimen/cabinetBtnHeight"
+            android:layout_height="match_parent"
             android:id="@+id/imageButton5"
             android:drawableTop="@drawable/conclusion"
             android:layout_marginLeft="9dp"
@@ -137,16 +283,17 @@
             android:textSize="12sp"
             android:onClick="onVuvod"
             android:fontFamily="@string/font_roboto_regular"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:layout_marginBottom="9dp" />
 
         <Button
             android:layout_width="0dp"
-            android:layout_height="@dimen/cabinetBtnHeight"
+            android:layout_height="match_parent"
             android:id="@+id/imageButton6"
             android:drawableTop="@drawable/sattings"
             android:background="@color/background"
             android:layout_marginLeft="9dp"
-            android:layout_marginRight="9dp"
+            android:layout_marginRight="8dp"
             android:layout_weight="1"
             android:paddingTop="10dp"
             android:text="@string/more"
@@ -154,7 +301,8 @@
             android:textSize="12sp"
             android:fontFamily="@string/font_roboto_regular"
             android:onClick="onMore"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:layout_marginBottom="9dp" />
         </LinearLayout>
 
 

@@ -5,30 +5,28 @@
     android:layout_height="fill_parent"
     android:background="@color/background">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:id="@+id/alertContainer"
-        android:paddingLeft="35dp">
+        android:id="@+id/alertContainer">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/deposits"
-            android:layout_alignParentLeft="true"/>
+            android:src="@drawable/ic_confirm_alert"
+            android:layout_weight="65"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/submit_text"
-            android:layout_alignParentRight="true"
             android:gravity="left|center_vertical|center_horizontal"
-            android:paddingRight="40dp"
             android:textSize="14sp"
-            android:textColor="@color/submit_attantion_color" />
-
-    </RelativeLayout>
+            android:paddingTop="10dp"
+            android:textColor="@color/submit_attantion_color"
+            android:layout_weight="35"/>
+    </LinearLayout>
 
     <ListView
         android:layout_width="wrap_content"

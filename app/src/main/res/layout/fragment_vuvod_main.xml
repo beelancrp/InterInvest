@@ -39,7 +39,7 @@
         app:ms_baseColor="@color/highlight_color"
         app:ms_highlightColor="@color/colorAccent"
         app:ms_errorColor="@color/submit_attantion_color"
-        app:ms_thickness="1dp"
+        app:ms_thickness="0.3dp"
         app:ms_arrowColor="@color/colorAccent"
         app:ms_arrowSize="12dp"
         app:ms_alignLabels="false"

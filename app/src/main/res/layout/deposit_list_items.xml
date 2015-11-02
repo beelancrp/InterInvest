@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
@@ -9,10 +9,12 @@
         android:textSize="14sp"
         android:textColor="@color/inputTextColor"
         android:text="sometext"
-        android:layout_alignParentLeft="true"
         android:id="@+id/key"
         android:paddingTop="16dp"
-        android:paddingBottom="16dp" />
+        android:paddingBottom="16dp"
+        android:layout_weight="70"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -20,13 +22,15 @@
         android:textSize="14sp"
         android:textColor="@color/colorAccent"
         android:text="sometext"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/key"
-        android:layout_toEndOf="@+id/key"
-        android:paddingLeft="29dp"
+        android:paddingLeft="0dp"
         android:id="@+id/value1"
         android:paddingBottom="16dp"
-        android:paddingTop="16dp" />
+        android:paddingTop="16dp"
+        android:layout_weight="30"
+        android:paddingRight="0dp" />
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/key"-->
+    <!--android:layout_toEndOf="@+id/key"-->
 
     <TextView
         android:layout_width="wrap_content"
@@ -35,12 +39,14 @@
         android:id="@+id/value2"
         android:textColor="@color/colorAccent"
         android:text="sometext"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/value1"
-        android:layout_toEndOf="@+id/value1"
-        android:paddingLeft="51dp"
+        android:paddingLeft="0dp"
         android:paddingTop="16dp"
-        android:paddingBottom="16dp" />
+        android:paddingBottom="16dp"
+        android:layout_weight="30"
+        android:paddingRight="0dp" />
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/value1"-->
+    <!--android:layout_toEndOf="@+id/value1"-->
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,12 +54,14 @@
         android:textSize="14sp"
         android:textColor="@color/colorAccent"
         android:text="sometext"
-        android:layout_toRightOf="@+id/value2"
-        android:layout_toEndOf="@+id/value2"
-        android:paddingLeft="51dp"
+        android:paddingLeft="0dp"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:id="@+id/value3" />
+        android:id="@+id/value3"
+        android:layout_weight="30"
+        android:paddingRight="0dp" />
+    <!--android:layout_toRightOf="@+id/value2"-->
+    <!--android:layout_toEndOf="@+id/value2"-->
 
 
-</RelativeLayout>
+</LinearLayout>

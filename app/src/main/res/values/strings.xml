@@ -50,7 +50,9 @@
     <string name="font_roboto_regular">fonts/Roboto-Regular.ttf</string>
     <string name="font_roboto_light_italic">fonts/Roboto-LightItalic.ttf</string>
     <string name="font_roboto_medium">fonts/Roboto-Medium.ttf</string>
-    <string name="submit_text"> Операция\n не подтверждена Вами!</string>
+    <string name="font_helv_light">fonts/HelveticaNeueLight.ttf</string>
+    <string name="font_helv_thin">fonts/helveticaneuecyr-thin.otf</string>
+    <string name="submit_text">Операция не подтверждена Вами!</string>
     <string name="submit">ПОДТВЕРДИТЬ</string>
     <string name="cancel">ОТМЕНИТЬ</string>
     <string name="transaction_reciever">Получатель</string>

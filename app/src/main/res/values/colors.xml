@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#44975e</color>
-    <color name="colorPrimaryDark">#212121</color>
+    <color name="colorPrimaryDark">#36784B</color>
     <color name="colorAccent">#44975e</color>
+    <color name="colorAccent_60">#6e44975e</color>
     <color name="background">#ffffff</color>
     <color name="backgroundCabinet">#eeeeee</color>
     <color name="btnTextColor">#ffffff</color>
     <color name="textColorPrimery">#ffffff</color>
     <color name="inputTextColor">#000000</color>
+    <color name="cabinetTabTextColor">#28000000</color>
     <color name="highlight_color">#cecece</color>
+    <color name="highlight_color_1">#36000000</color>
     <color name="submit_attantion_color">#f2240d</color>
+    <color name="cabinet_tabs_color">#fcfcfc</color>
 </resources>

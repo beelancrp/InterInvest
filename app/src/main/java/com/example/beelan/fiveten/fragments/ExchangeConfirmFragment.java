@@ -78,12 +78,12 @@ public class ExchangeConfirmFragment extends Fragment {
 
 
     private List<FragmentComponentsList> initItemList() {
-        List<FragmentComponentsList> list = new ArrayList<FragmentComponentsList>();
-        list.add(new FragmentComponentsList(1, "Статус", "Ожидает подтверждения"));
-        list.add(new FragmentComponentsList(2, "Дата", "сегодня," + currentTime));
-        list.add(new FragmentComponentsList(3, "Платежная система", "Доллар"));
-        list.add(new FragmentComponentsList(4, "Сумма", "2,00"));
-        return list;
+        List<FragmentComponentsList> list1 = new ArrayList<FragmentComponentsList>();
+        list1.add(new FragmentComponentsList(1, "Статус", "Ожидает подтверждения"));
+        list1.add(new FragmentComponentsList(2, "Дата", "сегодня," + currentTime));
+        list1.add(new FragmentComponentsList(3, "Платежная система", "Доллар"));
+        list1.add(new FragmentComponentsList(4, "Сумма", "2,00"));
+        return list1;
 
     }
 }
