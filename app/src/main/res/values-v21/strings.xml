@@ -1,8 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Inter Invest</string>
+    <!-- Cabinet layout -->
+    <string name="cabinet">Кабинет</string>
+        <string name="balance">Баланс</string>
+        <string name="course">КУРС $:</string>
+
+            <string name="usd_tab">USD</string>
+                <string name="usd">доларах</string>
+
+            <string name="hrn_tab">ГРН</string>
+                <string name="hrn">гривнах</string>
+
+            <string name="rub_tab">РУБ</string>
+                <string name="rub">рублях</string>
+
+            <string name="eur_tab">EUR</string>
+                <string name="eur">евро</string>
+
+            <string name="pln_tab">PLN</string>
+                <string name="pln">злотых</string>
+
+            <string name="balance_in">Баланс в </string>
+        <string name="popolnit">Пополнить</string>
+        <string name="exchange">Обмен</string>
+        <string name="transaction">Перевести</string>
+        <string name="invest">Сделать вклад</string>
+        <string name="vuvod">Вывод средств</string>
+        <string name="more">Еще</string>
+
+    <!-- Poplnenie layout -->
+    <string name="popolnenie">Пополнение</string>
+        <string name="pay_system">Платежная система</string>
+        <string name="summ">Сумма</string>
+        <string name="btn_popolnit">ПОПОЛНИТЬ</string>
     <string name="enter_pass">Введите пароль</string>
-    <string name="enter_email">Введите e-mail</string>
+    <string name="enter_email">Введите номер телефона</string>
     <string name="login">ВХОД</string>
+    <string name="btn_logout">LogOut</string>
+
+    <!-- Transaction layout -->
+    <!--<string name="transaction_l">ПОПОЛНИТЬ</string>-->
+    <!--<string name="btn_popolnit">ПОПОЛНИТЬ</string>-->
+    <!--<string name="btn_popolnit">ПОПОЛНИТЬ</string>-->
+    <!--<string name="btn_popolnit">ПОПОЛНИТЬ</string>-->
+    <!--<string name="btn_popolnit">ПОПОЛНИТЬ</string>-->
+    <!--<string name="btn_popolnit">ПОПОЛНИТЬ</string>-->
+
+    <string name="font_roboto_light">fonts/Roboto-Light.ttf</string>
+    <string name="font_roboto_regular">fonts/Roboto-Regular.ttf</string>
+    <string name="font_roboto_light_italic">fonts/Roboto-LightItalic.ttf</string>
+    <string name="font_roboto_medium">fonts/Roboto-Medium.ttf</string>
+    <string name="font_helv_light">fonts/HelveticaNeueLight.ttf</string>
+    <string name="font_helv_thin">fonts/helveticaneuecyr-thin.otf</string>
     <string name="submit_text">Операция не подтверждена Вами!</string>
     <string name="submit">ПОДТВЕРДИТЬ</string>
     <string name="cancel">ОТМЕНИТЬ</string>
@@ -13,10 +62,6 @@
     <string name="you_will_have">Вы получите:</string>
     <string name="btn_exchange">ОБМЕНЯТЬ</string>
     <string name="btn_vuvod">ВЫВЕСТИ</string>
-    <string name="font_roboto_light">fonts/Roboto-Light.ttf</string>
-    <string name="font_roboto_regular">fonts/Roboto-Regular.ttf</string>
-    <string name="font_roboto_light_italic">fonts/Roboto-LightItalic.ttf</string>
-    <string name="font_roboto_medium">fonts/Roboto-Medium.ttf</string>
-    <string name="font_helv_light">fonts/HelveticaNeueLight.ttf</string>
-    <string name="font_helv_thin">fonts/helveticaneuecyr-thin.otf</string>
+    <string name="vuvod_alert">Просьба выводить средства кратной 50 или 100 иначе система выплат будет автоматически округлять!</string>
+
 </resources>

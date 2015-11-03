@@ -61,13 +61,13 @@
         <EditText android:id="@+id/input_transaction_reciever"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
             android:hint="@string/transaction_reciever"
             android:fontFamily="HelveticaNeue-Light"
             android:textSize="16sp"
             android:textColor="@color/inputTextColor"
             android:singleLine="false"
-            android:focusableInTouchMode="true" />
+            android:focusableInTouchMode="true"
+            android:inputType="textCapWords" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -83,7 +83,7 @@
         <EditText android:id="@+id/input_transaction_about"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
+            android:inputType="textShortMessage|textMultiLine"
             android:hint="@string/transaction_about"
             android:fontFamily="HelveticaNeue-Light"
             android:textSize="16sp"

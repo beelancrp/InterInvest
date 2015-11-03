@@ -8,14 +8,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:id="@+id/alertContainer">
+        android:id="@+id/alertContainer"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_confirm_alert"
-            android:layout_weight="65"/>
+            android:id="@+id/pay_logo" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -25,7 +26,9 @@
             android:textSize="14sp"
             android:paddingTop="10dp"
             android:textColor="@color/submit_attantion_color"
-            android:layout_weight="35"/>
+            android:layout_weight="35"
+            android:id="@+id/pay_alert_msg"
+            android:layout_marginLeft="15dp" />
     </LinearLayout>
 
     <ListView
@@ -35,6 +38,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         android:dividerHeight="1dp"
+        android:divider="@color/highlight_color_1"
         android:footerDividersEnabled="true"
         android:layout_below="@+id/alertContainer">
     </ListView>

@@ -42,11 +42,11 @@
                 <EditText android:id="@+id/input_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
                     android:hint="@string/enter_email"
                     android:fontFamily="HelveticaNeue-Light"
                     android:textSize="16dp"
-                    android:textColor="@color/inputTextColor" />
+                    android:textColor="@color/inputTextColor"
+                    android:inputType="phone" />
             </android.support.design.widget.TextInputLayout>
 
             <!-- Password Label -->

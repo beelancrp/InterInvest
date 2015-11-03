@@ -26,7 +26,7 @@
         android:orientation="vertical"
         android:layout_below="@+id/appBarLayout"
         android:id="@+id/cabinetBalanceLayout"
-        android:background="@drawable/shadow_3"
+        android:background="@drawable/shadow_5"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
@@ -205,7 +205,7 @@
                 android:fontFamily="@string/font_roboto_regular"
                 android:textAllCaps="false"
                 android:layout_weight="1"
-                android:onClick="onPay" />
+                android:onClick="onCabinetButtonClick" />
 
         <Button
             android:layout_width="wrap_content"
@@ -219,7 +219,7 @@
             android:textSize="12sp"
             android:fontFamily="@string/font_roboto_regular"
             android:textAllCaps="false"
-            android:onClick="onExchange"
+            android:onClick="onCabinetButtonClick"
             android:layout_weight="1"
             android:layout_marginLeft="9dp"
             android:layout_marginBottom="9dp" />
@@ -240,7 +240,7 @@
             android:fontFamily="@string/font_roboto_regular"
             android:textAllCaps="false"
             android:layout_weight="1"
-            android:onClick="onTransaction" />
+            android:onClick="onCabinetButtonClick" />
         </LinearLayout>
 
     <LinearLayout
@@ -250,12 +250,12 @@
         android:weightSum="3"
         android:orientation="horizontal"
         android:layout_below="@+id/btnGroup_1"
-        android:id="@+id/linearLayout">
+        android:id="@+id/btn_group_2">
 
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/imageButton4"
+            android:id="@+id/cabinetBtnDeposit"
             android:layout_marginLeft="9dp"
             android:drawableTop="@drawable/contribution"
             android:background="@color/background"
@@ -264,7 +264,7 @@
             android:paddingTop="10dp"
             android:textColor="#6d6d6d"
             android:textSize="12sp"
-            android:onClick="onDeposit"
+            android:onClick="onCabinetButtonClick"
             android:fontFamily="@string/font_roboto_regular"
             android:textAllCaps="false"
             android:layout_marginBottom="9dp" />
@@ -272,7 +272,7 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/imageButton5"
+            android:id="@+id/cabinetBtnVuvod"
             android:drawableTop="@drawable/conclusion"
             android:layout_marginLeft="9dp"
             android:layout_weight="1"
@@ -281,7 +281,7 @@
             android:background="@color/background"
             android:textColor="#6d6d6d"
             android:textSize="12sp"
-            android:onClick="onVuvod"
+            android:onClick="onCabinetButtonClick"
             android:fontFamily="@string/font_roboto_regular"
             android:textAllCaps="false"
             android:layout_marginBottom="9dp" />
@@ -289,8 +289,8 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/imageButton6"
-            android:drawableTop="@drawable/sattings"
+            android:id="@+id/cabinetBtnMore"
+            android:drawableTop="@drawable/more"
             android:background="@color/background"
             android:layout_marginLeft="9dp"
             android:layout_marginRight="8dp"
@@ -300,7 +300,7 @@
             android:textColor="#6d6d6d"
             android:textSize="12sp"
             android:fontFamily="@string/font_roboto_regular"
-            android:onClick="onMore"
+            android:onClick="onCabinetButtonClick"
             android:textAllCaps="false"
             android:layout_marginBottom="9dp" />
         </LinearLayout>

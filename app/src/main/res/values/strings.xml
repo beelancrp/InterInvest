@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Five.Ten</string>
+    <string name="app_name">Inter Invest</string>
     <!-- Cabinet layout -->
     <string name="cabinet">Кабинет</string>
         <string name="balance">Баланс</string>
@@ -34,7 +34,7 @@
         <string name="summ">Сумма</string>
         <string name="btn_popolnit">ПОПОЛНИТЬ</string>
     <string name="enter_pass">Введите пароль</string>
-    <string name="enter_email">Введите e-mail</string>
+    <string name="enter_email">Введите номер телефона</string>
     <string name="login">ВХОД</string>
     <string name="btn_logout">LogOut</string>
 

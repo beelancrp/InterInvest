@@ -25,10 +25,9 @@ tools:context=".MoreActivity">
         android:layout_gravity="top|center_horizontal"
         android:weightSum="3"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
         android:orientation="horizontal"
         android:layout_below="@id/view"
-        android:id="@+id/linearLayout">
+        android:id="@+id/btn_group_3">
 
         <Button
             android:layout_width="0dp"
@@ -43,7 +42,8 @@ tools:context=".MoreActivity">
             android:textColor="#6d6d6d"
             android:textSize="12sp"
             android:fontFamily="@string/font_roboto_regular"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:layout_marginBottom="5dp" />
 
         <Button
             android:layout_width="0dp"
@@ -58,7 +58,8 @@ tools:context=".MoreActivity">
             android:textColor="#6d6d6d"
             android:textSize="12sp"
             android:fontFamily="@string/font_roboto_regular"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:layout_marginBottom="5dp" />
 
         <Button
             android:layout_width="0dp"
@@ -74,14 +75,16 @@ tools:context=".MoreActivity">
             android:textColor="#6d6d6d"
             android:textSize="12sp"
             android:fontFamily="@string/font_roboto_regular"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:layout_marginBottom="5dp" />
     </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/pay_system_fragment_container"
-        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/btn_group_3"
         android:orientation="vertical"/>
 
 
