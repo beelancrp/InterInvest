@@ -186,9 +186,9 @@
         android:weightSum="3"
         android:orientation="horizontal"
         android:id="@+id/btnGroup_1"
-        android:layout_below="@+id/cabinetBalanceLayout"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_above="@+id/btn_group_2"
+        android:layout_marginLeft="9dp"
+        android:layout_marginBottom="9dp">
 
             <Button
                 android:layout_width="wrap_content"
@@ -196,16 +196,14 @@
                 android:id="@+id/cabinetBtnPopolnit"
                 android:drawableTop="@drawable/deposits"
                 android:background="@color/background"
-                android:layout_marginLeft="9dp"
-                android:layout_marginBottom="9dp"
                 android:paddingTop="10dp"
                 android:text="@string/popolnit"
                 android:textColor="#6d6d6d"
                 android:textSize="12sp"
                 android:fontFamily="@string/font_roboto_regular"
                 android:textAllCaps="false"
-                android:layout_weight="1"
-                android:onClick="onCabinetButtonClick" />
+                android:onClick="onCabinetButtonClick"
+                android:layout_weight="1" />
 
         <Button
             android:layout_width="wrap_content"
@@ -222,7 +220,7 @@
             android:onClick="onCabinetButtonClick"
             android:layout_weight="1"
             android:layout_marginLeft="9dp"
-            android:layout_marginBottom="9dp" />
+            android:layout_marginRight="9dp" />
 
         <Button
             android:layout_width="wrap_content"
@@ -230,8 +228,6 @@
             android:id="@+id/cabinetBtnTransaction"
             android:drawableTop="@drawable/transfer"
             android:background="@color/background"
-            android:layout_marginLeft="9dp"
-            android:layout_marginBottom="9dp"
             android:layout_marginRight="8dp"
             android:paddingTop="10dp"
             android:text="@string/transaction"
@@ -249,14 +245,15 @@
         android:layout_gravity="bottom|center_horizontal"
         android:weightSum="3"
         android:orientation="horizontal"
-        android:layout_below="@+id/btnGroup_1"
-        android:id="@+id/btn_group_2">
+        android:id="@+id/btn_group_2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="9dp"
+        android:layout_marginBottom="9dp">
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/cabinetBtnDeposit"
-            android:layout_marginLeft="9dp"
             android:drawableTop="@drawable/contribution"
             android:background="@color/background"
             android:text="@string/invest"
@@ -266,15 +263,13 @@
             android:textSize="12sp"
             android:onClick="onCabinetButtonClick"
             android:fontFamily="@string/font_roboto_regular"
-            android:textAllCaps="false"
-            android:layout_marginBottom="9dp" />
+            android:textAllCaps="false" />
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/cabinetBtnVuvod"
             android:drawableTop="@drawable/conclusion"
-            android:layout_marginLeft="9dp"
             android:layout_weight="1"
             android:paddingTop="10dp"
             android:text="@string/vuvod"
@@ -284,15 +279,15 @@
             android:onClick="onCabinetButtonClick"
             android:fontFamily="@string/font_roboto_regular"
             android:textAllCaps="false"
-            android:layout_marginBottom="9dp" />
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp" />
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/cabinetBtnMore"
             android:drawableTop="@drawable/more"
             android:background="@color/background"
-            android:layout_marginLeft="9dp"
             android:layout_marginRight="8dp"
             android:layout_weight="1"
             android:paddingTop="10dp"
@@ -301,8 +296,7 @@
             android:textSize="12sp"
             android:fontFamily="@string/font_roboto_regular"
             android:onClick="onCabinetButtonClick"
-            android:textAllCaps="false"
-            android:layout_marginBottom="9dp" />
+            android:textAllCaps="false" />
         </LinearLayout>
 
 

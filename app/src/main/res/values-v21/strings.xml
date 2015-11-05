@@ -38,14 +38,6 @@
     <string name="login">ВХОД</string>
     <string name="btn_logout">LogOut</string>
 
-    <!-- Transaction layout -->
-    <!--<string name="transaction_l">ПОПОЛНИТЬ</string>-->
-    <!--<string name="btn_popolnit">ПОПОЛНИТЬ</string>-->
-    <!--<string name="btn_popolnit">ПОПОЛНИТЬ</string>-->
-    <!--<string name="btn_popolnit">ПОПОЛНИТЬ</string>-->
-    <!--<string name="btn_popolnit">ПОПОЛНИТЬ</string>-->
-    <!--<string name="btn_popolnit">ПОПОЛНИТЬ</string>-->
-
     <string name="font_roboto_light">fonts/Roboto-Light.ttf</string>
     <string name="font_roboto_regular">fonts/Roboto-Regular.ttf</string>
     <string name="font_roboto_light_italic">fonts/Roboto-LightItalic.ttf</string>

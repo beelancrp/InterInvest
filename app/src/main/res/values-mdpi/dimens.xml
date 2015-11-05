@@ -4,7 +4,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="toolBar_title_size">20sp</dimen>
     <dimen name="cabinetBtnWidth">109dp</dimen>
-    <dimen name="cabinetBtnHeight">104dp</dimen>
+    <dimen name="cabinetBtnHeight">85dp</dimen>
     <dimen name="margin_balance_top">0dp</dimen>
     <dimen name="margin_your_balance_bottom">0dp</dimen>
 </resources>
